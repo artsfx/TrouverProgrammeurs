@@ -97,10 +97,13 @@ body {
 }
 
 .h1-bold {
-    margin-top:60px;
+    margin-top:30px;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.form-check-label {
-    margin-bottom: 30px;
+/* Page de connexion */
+.connexion-group {
+    border: 1px solid #6497b1;
+    padding: 0 30px 30px 30px;
+    margin: 30px;
 }
