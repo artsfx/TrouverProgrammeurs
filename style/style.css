@@ -1,0 +1,106 @@
+body {
+    font-size: 10px;
+    border-radius: 0;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container-xl {
+    font-size: 1.2em;
+}
+
+.card p {
+    font-size: 1.5em;
+}
+
+.card {
+    text-align: center;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.card-hover:hover {
+    transform: scale(1.05);
+}
+.card-img-top {
+    margin: 10px auto;
+    width: 30%;
+    border: 1px solid #6497b1;
+}
+
+.nom-programmeur {
+    font-weight: 900;
+}
+
+.right {
+    float: right !important;
+}
+
+.left {
+    float: left !important;
+}
+
+.navbar-brand  {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 2em;
+    color: #fff !important;
+}
+
+.navbar {
+    background-color: #1E5DBC !important;
+}
+.icons {
+    font-size: 40px;
+    color: #6497b1;
+}
+
+.icons:hover {
+    font-size: 40px;
+    color: #031f4b;
+    text-decoration: none;
+    transform: scale(1.2);
+}
+
+.tri {
+    padding:0;
+    margin-top: 60px;
+    margin-bottom: 30px;
+
+}
+
+.btn {
+    margin-right: 10px;
+    border-radius: 0;
+}
+
+.btn-outline-success, .btn-primary {
+    background-color: #6497b1;
+    color: #fff;
+    border: 0px solid #fff;
+}
+
+
+.btn-outline-success:hover, .btn-primary:hover {
+    background-color: #031f4b;
+    color: #fff;
+    border: 0px solid #fff;
+}
+
+
+.navbar-buttons {
+    float:right !important;
+}
+
+.label-bold {
+    font-size: 1.5em;
+    font-weight: bold !important;
+}
+
+.h1-bold {
+    margin-top:60px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.form-check-label {
+    margin-bottom: 30px;
+}
