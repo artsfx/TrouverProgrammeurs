@@ -10,6 +10,7 @@ body {
     font-size: 1.2em;
 }
 
+/*********************** Les cartes *****************************/
 .card p {
     font-size: 1.5em;
 }
@@ -28,6 +29,8 @@ body {
     border: 1px solid #6497b1;
 }
 
+/********************************************************************/
+
 .nom-programmeur {
     font-weight: 900;
 }
@@ -40,13 +43,15 @@ body {
     font-size: 2em;
     color: #fff !important;
 }
+/*******************************************/
 
-/* Barre de navigation */
+/**************** Barre de navigation *******************/
 .navbar {
     background-color: #1E5DBC !important;
 }
+/**********************************************************/
 
-/*Les icons enveloppe et etoile */
+/**************** Les icons enveloppe et etoile ***************/
 .icons {
     font-size: 40px;
     color: #6497b1;
@@ -58,15 +63,18 @@ body {
     text-decoration: none;
     transform: scale(1.2);
 }
+/******************************************************************/ 
 
-/************************/
+/********** Menu de tri **************/
 .tri {
     padding:0;
     margin-top: 60px;
     margin-bottom: 30px;
 
 }
+/*****************************************/
 
+/*************************************** Les boutons ***********************************/
 .btn {
     margin-right: 10px;
     border-radius: 0;
@@ -84,7 +92,7 @@ body {
     color: #fff;
     border: 0px solid #fff;
 }
-
+/*****************************************************************************************/
 
 .navbar-buttons {
     float:right !important;
@@ -100,13 +108,27 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+/*********************** Champ obligatoire ******************************/
 .asterisk {
     color: red;
 }
-/* Page de connexion */
+/*********************************************************************/
+
+/************** Pour l'ajout d'un nouveau programmeur  ****************/
 .connexion-group {
     border: 1px solid #6497b1;
     padding: 0 30px 30px 30px;
     margin: 30px;
 }
+/************************************************/
 
+
+.display-inline {
+    display:inline-block !important;
+}
+
+/******************* Pour la liste des favoris **********************************/
+.dropdown-item {
+	font-size: 1.5em;
+}
+/********************************************************/
