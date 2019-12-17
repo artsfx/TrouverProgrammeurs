@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/menurecherche.css">
     <title>TrouverProgrammeurs</title>
 </head>
 
 <body>
-    <!------------------------------- Début La barre de navigation en haut de la page avec le logo ------------------------------>
+    <!-- ================================== Début La barre de navigation en haut de la page avec le logo ================================== -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">TrouverProgrammeurs</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
@@ -39,7 +39,7 @@
             </form>
         </div>
     </nav>
-    <!------------------------------- Fin barre de navigation ------------------------------>
+    <!-- ================================== Fin barre de navigation ================================== -->
 
     <!--    Début Le champ de recherche  qui s'affiche en cliquant sur le bouton Recherche de la barre de navigation -->
     <div class="menu-recherche">
@@ -58,14 +58,14 @@
             <div class="col"></div>
         </div>
     </div>
-    <!-- ----------------   Fin Le champ de recherche ----------------------------->
+    <!-- ==================================   Fin Le champ de recherche ================================== -->
 
-    <!------------------Le contenu principal -------------->
+    <!-- ================================== Le contenu principal ================================== -->
     <div class="container-xl">
-        <!-------------------------Début Bouton tri + bouton ajouter ----------------------------------->
+        <!-- ================================== Début Bouton tri + bouton ajouter ================================== -->
         <div class="tri row">
             <div class="col">
-                <label for="tri" class="label-bold">Trier par</label>
+                <h4>Trier par</h4>
                 <div>
                     <select name="tri" class="form-control rounded-0 display-inline">
                         <option>Langage</option>
@@ -82,10 +82,10 @@
             <div class="col"></div>
             <div class="col"></div>
         </div>
-        <!------------------------- Fin Bouton tri + bouton ajouter ----------------------------------->
+        <!-- ================================== Fin Bouton tri + bouton ajouter ================================== -->
 
 
-        <!-------------------------------Début Les cartes de programmeurs --------------------------------->
+        <!-- ================================== Début Les cartes de programmeurs ================================== -->
         <div class="row row-cols-1 row-cols-md-3">
             <div class="col mb-4">
                 <div class="card card-hover rounded-0">
@@ -196,7 +196,7 @@
                 </div>
             </div>
         </div>
-        <!-------------------------------Fin Les cartes de programmeurs --------------------------------->
+        <!-- ================================== Fin Les cartes de programmeurs ================================== -->
 
         <!-- Les modals -->
         <!-- Modal Ajouter programmeur -->
@@ -227,8 +227,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="photo-profil" class="label-bold">Photo de profil</label>
-                                <input type="file" class="form-control rounded-0" id="photo-profil"
-                                    placeholder="Cliquez ici pour choisir une photo">
+                                <input type="file" class="form-control rounded-0" id="photo-profil">
                             </div>
 
                             <div class="form-group">
@@ -261,7 +260,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title h1-bold" id="favorisModal">Favoris</h1>
+                        <h1 class="modal-title h1-bold" id="favorisModalLabel">Favoris</h1>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -277,7 +276,7 @@
                 </div>
             </div>
         </div>
-
+</div>
         <!-- Optional JavaScript -->
         <script src="js/script1.js"></script>
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
