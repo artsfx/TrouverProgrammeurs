@@ -5,9 +5,6 @@
         var ajouterBtn = document.getElementById("ajouter-programmeur");
         var fermerBtn = document.querySelector(".fermer-btn");
         var listeProgrammeurs = new ListeProgrammeurs();
-        listeProgrammeurs.addProgrammeur(new Programmeur("Boukhoulda", "Lokman", ["Java", "CSS"], "boukhoulda.lokman@gmail.com"));
-        listeProgrammeurs.addProgrammeur(new Programmeur("Chadli", "Adam", ["Java", "HTML"], "boukhoulda.adam@gmail.com"));
-        listeProgrammeurs.addProgrammeur(new Programmeur("Amine", "Adam", ["Java", "HTML"], "boukhoulda.adam@gmail.com"));
         var selectTriElem = document.getElementById("tri");
         var listeCards = new ListeCards();
         var prenomInput = document.getElementById("inputPrenom");
