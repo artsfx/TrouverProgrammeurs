@@ -33,7 +33,10 @@
         const LANGAGE = "LANGAGE";
         const NOM = "NOM";
         const PRENOM = "PRENOM";
-
+        listeProgrammeurs.sortBy(selectTriElem.value);
+        programmeursToCards(listeProgrammeurs.getAllProgrammeurs());
+        afficherCards();
+        afficherFavoris();
         resetFormAjouter();
         setListeners();
 
@@ -438,12 +441,7 @@
             afficherCards();
         }
 
-        rechercheInput.addEventListener("keyup", function () {
-            console.log(listeProgrammeurs.getAllProgrammeurs()[0].getLangages())
-            if (rechercher.getResultat(rechercheInput.value.toLowerCase()).length > 0) {
-                afficherRecherche();
-            }
-        })
+
 
 
         /*************************************** Les Listeners  ************************************/
@@ -469,12 +467,17 @@
                     menuRecherche.classList.remove("open");
                     open = false;
                 }
-                console.log(listeProgrammeurs.getAllProgrammeurs()[0].getLangages())
                 if (rechercher.getResultat(rechercheInput.value.toLowerCase()).length > 0) {
                     afficherRecherche();
                 }
             });
 
+            rechercheInput.addEventListener("input", function () {
+                console.log(listeProgrammeurs.getAllProgrammeurs()[0].getLangages())
+                if (rechercher.getResultat(rechercheInput.value.toLowerCase()).length > 0) {
+                    afficherRecherche();
+                }
+            })
 
 
             ajouterModalBtn.addEventListener("click", function () {
@@ -515,10 +518,7 @@
                 afficherCards();
             })
 
-            listeProgrammeurs.sortBy(selectTriElem.value);
-            programmeursToCards(listeProgrammeurs.getAllProgrammeurs());
-            afficherCards();
-            afficherFavoris();
+
 
             emailInput.addEventListener("input", function () {
                 var erreurEmailSpan = document.getElementById("erreur-email");
