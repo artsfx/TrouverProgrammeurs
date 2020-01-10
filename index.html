@@ -75,7 +75,7 @@
                 </div>
                 <br>
                 <a href="#" class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#ajouterModal"
-                     title="Ajouter un programmeur">Ajouter</a>
+                     title="Ajouter un programmeur" id="ajouter-programmeur">Ajouter</a>
             </div>
             <div class="col">
             </div>
@@ -112,7 +112,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title h1-bold" id="ajouterModalLabel">Ajouter un programmeur</h1>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="fermer-modal">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -124,22 +124,25 @@
                                             class="asterisk">*</span></label>
                                     <input type="text" class="form-control rounded-0" id="inputPrenom"
                                         placeholder="Saisir votre prénom">
+                                        <span class="erreur" id="erreur-prenom"></span>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputNom" class="label-bold">Nom<span class="asterisk">*</span></label>
                                     <input type="text" class="form-control rounded-0" id="inputNom"
                                         placeholder="Saisir votre nom">
+                                        <span class="erreur" id="erreur-nom"></span>
                                 </div>
                             </div>
-                            <div class="form-group">
+<!--                             <div class="form-group">
                                 <label for="photo-profil" class="label-bold">Photo de profil</label>
                                 <input type="file" class="form-control rounded-0" id="photo-profil">
-                            </div>
+                            </div> -->
 
                             <div class="form-group">
                                 <label for="inputEmail" class="label-bold">Email<span class="asterisk">*</span></label>
                                 <input type="email" class="form-control rounded-0" id="inputEmail"
                                     placeholder="adresse@email.com">
+                                    <span class="erreur" id="erreur-email"></span>
                             </div>
 
                             <div class="form-group">
@@ -147,13 +150,17 @@
                                         class="asterisk">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="langagesTxtField"
                                     placeholder="Saisissez les langages">
+                                    <span>Séparez les langages par une virgule (,) ou un point virgule (;)</span>
+                                    <span class="erreur" id="erreur-langages"></span>
+
                             </div>
+                            <span class="erreur" id="erreur-globale"></span>
 
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                        <button type="button" class="btn btn-primary" id="ajouter-programmeur">Ajouter</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="ajout-fermer">Fermer</button>
+                        <button type="button" class="btn btn-primary" id="ajouter-programmeur-modal">Ajouter</button>
                     </div>
                 </div>
             </div>
@@ -171,10 +178,8 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="">
-                        <a class="dropdown-item" href="#">Programmeur 1</a>
-                        <a class="dropdown-item" href="#">Programmeur 2</a>
-                        <a class="dropdown-item" href="#">Programmeur 3</a>
+                    <div id="modal-favoris-content">
+                       <!-- <a class="dropdown-item" href="#">Programmeur 1</a> -->
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
