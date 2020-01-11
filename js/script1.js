@@ -481,7 +481,7 @@
 
 
             ajouterModalBtn.addEventListener("click", function () {
-                var regex = /,|;|/;
+                var regex = /,|;/;
                 var programmeur = new Programmeur(nomInput.value, prenomInput.value, langagesTxtField.value.split(regex), emailInput.value);
                 var erreurGlobale = document.getElementById("erreur-globale");
 
