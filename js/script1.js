@@ -1,6 +1,15 @@
-(
+
     // Au chargement de la page exécuter cette fonction
-    function () {
+    window.onload = init();
+
+    var logoElem = document.getElementById("trouver-programmeurs");
+
+    logoElem.addEventListener("click", init);
+
+    function init () {
+
+        var listeFavoris = new ListeFavoris();
+        var listeFavorisHTML = new ListeFavorisHTML();
         var menuRecherche = document.querySelector(".menu-recherche");
         var rechercheBtn = document.querySelector(".recherche-btn");
         var ajouterModalBtn = document.getElementById("ajouter-programmeur-modal");
@@ -8,7 +17,6 @@
         var fermerRechercheBtn = document.querySelector(".fermer-btn");
         var fermerAjoutBtn = document.getElementById("ajout-fermer");
         var listeProgrammeurs = new ListeProgrammeurs();
-        var listeFavorisHTML = new ListeFavorisHTML();
         var programmeur1 = new Programmeur("Gates", "Bill", ["C#", "Visual Basic", "Assembleur"], "gates.bill@microsoft.com");
         var programmeur2 = new Programmeur("Jobs", "Steve", ["Swift", "C"], "jobs.steve@apple.com");
         var programmeur3 = new Programmeur("Zuckerberg", "Mark", ["ReactJS", "React Native", "PHP"], "zuckerberg.mark@facebook.com");
@@ -17,7 +25,7 @@
         listeProgrammeurs.addProgrammeur(programmeur2);
         listeProgrammeurs.addProgrammeur(programmeur3);
 
-        var listeFavoris = new ListeFavoris();
+        
         var selectTriElem = document.getElementById("tri");
         var listeCards = new ListeCards();
         var prenomInput = document.getElementById("inputPrenom");
@@ -38,6 +46,7 @@
         afficherCards();
         afficherFavoris();
         resetFormAjouter();
+        resetRechercher();
         setListeners();
 
 
@@ -228,7 +237,6 @@
                     favoris.removeChild(favorisTextNode);
                     favorisTextNode = document.createTextNode("☆");
                     favoris.appendChild(favorisTextNode);
-                    console.log(listeFavoris.getAllFavoris());
 
                 } else {
                     listeFavorisHTML.resetFavoris();
@@ -240,7 +248,6 @@
                     favoris.removeChild(favorisTextNode);
                     favorisTextNode = document.createTextNode("★");
                     favoris.appendChild(favorisTextNode);
-                    console.log(listeFavoris.getAllFavoris());
 
 
                 }
@@ -335,6 +342,10 @@
             erreurGlobale.innerHTML = "";
         }
 
+        function resetRechercher() {
+            rechercheInput.value = "";
+        }
+
         //Liste des programmeurs 
         function ListeProgrammeurs() {
             var programmeurs = [];
@@ -400,7 +411,6 @@
                 favorisContainer.removeChild(favorisContainer.firstChild);
             }
 
-            console.log(favorisContainer);
             if (listeFavorisHTML.getAllFavoris().length > 0) {
                 listeFavorisHTML.getAllFavoris().forEach(fav => {
                     favorisContainer.appendChild(fav)
@@ -443,12 +453,12 @@
 
 
 
-
         /*************************************** Les Listeners  ************************************/
 
         function setListeners() {
             rechercheBtn.addEventListener("click", function () {
                 if (!open) {
+                    rechercheInput.value = "";
                     menuRecherche.classList.add("open");
                     open = true;
                 }
@@ -470,10 +480,10 @@
                 if (rechercher.getResultat(rechercheInput.value.toLowerCase()).length > 0) {
                     afficherRecherche();
                 }
+
             });
 
             rechercheInput.addEventListener("input", function () {
-                console.log(listeProgrammeurs.getAllProgrammeurs()[0].getLangages())
                 if (rechercher.getResultat(rechercheInput.value.toLowerCase()).length > 0) {
                     afficherRecherche();
                 }
@@ -588,6 +598,5 @@
         }
 
         /********************************************************************************************/
-
-    })();
+    }
 
